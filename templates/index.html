@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+</head>
+<body>
+	
+<form action="/predict" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+   <label>Select Image</label>
+   <div class="custom-file">
+   		<input type="file" class="custom-file-input" name="file" id="image">
+   		<label class="custom-file-label" for="image">Select image...</label>
+   		<br><br>
+   		<input type = "submit">
+   </div>
+
+</form>
+<img src={{imgpath}}>
+{% block content %}
+	<h1>{{p}}</h1>
+{% endblock %}
+
+</body>
+</html>
